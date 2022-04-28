@@ -1,13 +1,11 @@
 {
-  "functions": {
-    "source": "functions"
-  },
   "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
+    "rewrites": [ {
+      "source": "/",
+      "run": {
+        "serviceId": "minpham-storefront",  // "service name" (from when you deployed the container image)
+        "region": "asia-southeast1"     // optional (if omitted, default is us-central1)
+      }
+    } ]
   }
 }
